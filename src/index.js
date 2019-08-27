@@ -1,12 +1,47 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Lesson 1
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// function HelloWorld(){
+//     return (
+//         <div> Hello Bash </div>
+//     )
+// }
+
+// Lesson 2
+
+// function HelloWorld2(){
+//     return React.createElement(
+//         'div',
+//         {},
+//         'Hello,',
+//         'world'
+//     )
+// }
+
+
+// Lesson 3 
+
+function Hello() {
+    return (
+        <span>Hello</span>
+    )
+}
+
+function World() {
+    return (
+        <span>World</span>
+    )
+}
+
+function HelloWorld() {
+    return (
+        <div>
+            <Hello /> <World />
+
+        </div>
+    )
+}
+
+ReactDom.render(<HelloWorld />, document.querySelector('#root'))
